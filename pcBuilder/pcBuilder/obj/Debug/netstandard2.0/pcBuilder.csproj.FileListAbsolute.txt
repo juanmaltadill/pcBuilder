@@ -1,0 +1,14 @@
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\bin\Debug\netstandard2.0\pcBuilder.deps.json
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\bin\Debug\netstandard2.0\pcBuilder.dll
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\bin\Debug\netstandard2.0\ref\pcBuilder.dll
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\bin\Debug\netstandard2.0\pcBuilder.pdb
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.csprojAssemblyReference.cache
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.AssemblyInfoInputs.cache
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.AssemblyInfo.cs
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.dll
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\ref\pcBuilder.dll
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.pdb
