@@ -2,17 +2,227 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pcBuilder.MainPage"
-             Padding="0,20,0,0">
+             Style="{StaticResource contentPageStyle}">
 
-   
-    <!--<StackLayout>
-        <Label Text="{Binding Tipo}" TextColor="Black"/>
-        <Label Text="{Binding Marca}" TextColor="Black"/>
-        <Label Text="{Binding Modelo}" TextColor="Black"/>
-        <Label Text="{Binding Precio}" TextColor="Black"/>
-        <Label Text="{Binding Content}" TextColor="Black"/>
-    </StackLayout>-->
-    <ListView ItemsSource="{Binding Componentes}"/>
+    <StackLayout  Style="{StaticResource stackLayoutStyle}">
 
+        <Label Text="Seleccionador de Componentes para Ordenador"/>
+        <!--BOQUE TARJETAS GRÁFICAS-->
+        <Frame x:Name="frameGraficas" 
+               BackgroundColor="LightGray" 
+               Padding="5"
+               HorizontalOptions="Center" 
+               WidthRequest="2000" 
+               HeightRequest="50" 
+               CornerRadius="0">
+            <Label WidthRequest="40" 
+                   Text="Tarjetas Gráficas" 
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
 
+        <ListView IsVisible="false" 
+                  x:Name="listGraficas" 
+                  ItemsSource="{Binding Graficas}" 
+                  Style="{StaticResource listViewStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10,10,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Column="1"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+                                                  <!--BOQUE PROCESADORES-->
+        <Frame x:Name="frameProcesadores" 
+               BackgroundColor="LightGray" 
+               Padding="5"
+               HorizontalOptions="Start" 
+               WidthRequest="500" 
+               HeightRequest="50" 
+               CornerRadius="0">
+            <Label WidthRequest="40" 
+                   Text="Procesadores" 
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
+
+        <ListView IsVisible="false" 
+                  x:Name="listProcesadores" 
+                  ItemsSource="{Binding Procesadores}" 
+                  Style="{StaticResource listViewStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10,10,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Column="2"
+                                   Text="{Binding Velocidad}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+                                            <!--BOQUE MEMORIAS RAM-->
+        <Frame x:Name="frameRams" 
+               BackgroundColor="LightGray" 
+               Padding="5"
+               HorizontalOptions="Start" 
+               WidthRequest="500" 
+               HeightRequest="50" 
+               CornerRadius="0">
+            <Label WidthRequest="40" 
+                   Text="Memorias RAM" 
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
+
+        <ListView IsVisible="false" 
+                  x:Name="listRams" 
+                  ItemsSource="{Binding Rams}" 
+                  Style="{StaticResource listViewStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10,10,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Column="2"
+                                   Text="{Binding Velocidad}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <Frame x:Name="frameHdds" 
+               BackgroundColor="LightGray" 
+               Padding="5"
+               HorizontalOptions="Start" 
+               WidthRequest="500" 
+               HeightRequest="50" 
+               CornerRadius="0">
+            <Label WidthRequest="40" 
+                   Text="Discos Duros" 
+                   HorizontalTextAlignment="Center"/>
+        </Frame>
+                                                 <!--BOQUE DISCOS DUROS-->
+        <ListView IsVisible="false" 
+                  x:Name="listHdds" 
+                  ItemsSource="{Binding Hdds}" 
+                  Style="{StaticResource listViewStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10,10,10,10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                            <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Column="2"
+                                   Text="{Binding Velocidad}"
+                                   FontAttributes="Bold" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
 </ContentPage>
