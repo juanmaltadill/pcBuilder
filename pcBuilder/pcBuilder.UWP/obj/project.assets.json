@@ -8068,18 +8068,18 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {},
+    "C:\\Users\\JuanCarlos\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.UWP\\pcBuilder.UWP.csproj",
+      "projectUniqueName": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.UWP\\pcBuilder.UWP.csproj",
       "projectName": "pcBuilder.UWP",
-      "projectPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.UWP\\pcBuilder.UWP.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.UWP\\obj\\",
+      "projectPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.UWP\\pcBuilder.UWP.csproj",
+      "packagesPath": "C:\\Users\\JuanCarlos\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -8087,7 +8087,7 @@
         "C:\\Program Files (x86)\\Microsoft SDKs\\UWPNuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\JuanCarlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -8101,8 +8101,8 @@
       "frameworks": {
         "uap10.0.16299": {
           "projectReferences": {
-            "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj": {
-              "projectPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj"
+            "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj": {
+              "projectPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj"
             }
           }
         }

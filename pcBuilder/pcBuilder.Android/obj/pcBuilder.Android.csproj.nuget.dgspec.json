@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj": {}
+    "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj": {
+    "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj",
+        "projectUniqueName": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj",
         "projectName": "pcBuilder.Android",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder.Android\\obj\\",
+        "projectPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.Android\\pcBuilder.Android.csproj",
+        "packagesPath": "C:\\Users\\JuanCarlos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JuanCarlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid90": {
             "projectReferences": {
-              "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj": {
-                "projectPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj"
+              "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj": {
+                "projectPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj"
               }
             }
           }
@@ -54,20 +54,20 @@
         }
       }
     },
-    "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj": {
+    "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj",
+        "projectUniqueName": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj",
         "projectName": "pcBuilder",
-        "projectPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj",
-        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\source\\repos\\pcBuilder\\pcBuilder\\pcBuilder\\obj\\",
+        "projectPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\pcBuilder.csproj",
+        "packagesPath": "C:\\Users\\JuanCarlos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\JuanCarlos\\Documents\\GitHub\\pcBuilder\\pcBuilder\\pcBuilder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JuanCarlos\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -117,7 +117,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

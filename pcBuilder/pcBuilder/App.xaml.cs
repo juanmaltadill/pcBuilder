@@ -10,7 +10,7 @@ namespace pcBuilder
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new Welcome();
         }
 
         protected override void OnStart()

@@ -1,23 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="pcBuilder.MainPage"
-             Style="{StaticResource contentPageStyle}">
+             x:Class="pcBuilder.MainPage">
 
-    <StackLayout  Style="{StaticResource stackLayoutStyle}">
+    <StackLayout>
 
-        <Label Text="Seleccionador de Componentes para Ordenador"/>
+        <Label Text="Seleccionador de Componentes para Ordenador"
+               Padding="0,20"
+               HorizontalOptions="Center"/>
         <!--BOQUE TARJETAS GRÁFICAS-->
         <Frame x:Name="frameGraficas" 
-               BackgroundColor="LightGray" 
-               Padding="5"
-               HorizontalOptions="Center" 
-               WidthRequest="2000" 
-               HeightRequest="50" 
-               CornerRadius="0">
+               Style="{StaticResource frameStyle}">
             <Label WidthRequest="40" 
                    Text="Tarjetas Gráficas" 
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
         </Frame>
 
         <ListView IsVisible="false" 
@@ -62,15 +59,11 @@
         </ListView>
                                                   <!--BOQUE PROCESADORES-->
         <Frame x:Name="frameProcesadores" 
-               BackgroundColor="LightGray" 
-               Padding="5"
-               HorizontalOptions="Start" 
-               WidthRequest="500" 
-               HeightRequest="50" 
-               CornerRadius="0">
+               Style="{StaticResource listViewStyle}">
             <Label WidthRequest="40" 
                    Text="Procesadores" 
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
         </Frame>
 
         <ListView IsVisible="false" 
@@ -117,15 +110,11 @@
         </ListView>
                                             <!--BOQUE MEMORIAS RAM-->
         <Frame x:Name="frameRams" 
-               BackgroundColor="LightGray" 
-               Padding="5"
-               HorizontalOptions="Start" 
-               WidthRequest="500" 
-               HeightRequest="50" 
-               CornerRadius="0">
+               Style="{StaticResource listViewStyle}">
             <Label WidthRequest="40" 
                    Text="Memorias RAM" 
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
         </Frame>
 
         <ListView IsVisible="false" 
@@ -169,19 +158,15 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+                                     <!--BOQUE DISCOS DUROS-->
         <Frame x:Name="frameHdds" 
-               BackgroundColor="LightGray" 
-               Padding="5"
-               HorizontalOptions="Start" 
-               WidthRequest="500" 
-               HeightRequest="50" 
-               CornerRadius="0">
+               Style="{StaticResource listViewStyle}">
             <Label WidthRequest="40" 
                    Text="Discos Duros" 
-                   HorizontalTextAlignment="Center"/>
+                   HorizontalTextAlignment="Center"
+                   VerticalTextAlignment="Center"/>
         </Frame>
-                                                 <!--BOQUE DISCOS DUROS-->
+                                                 
         <ListView IsVisible="false" 
                   x:Name="listHdds" 
                   ItemsSource="{Binding Hdds}" 
@@ -223,6 +208,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
+        <Button Text="Realizar Compra"
+                HorizontalOptions="Center"
+                WidthRequest="300"
+                Clicked="Clicked"/>
     </StackLayout>
 </ContentPage>
