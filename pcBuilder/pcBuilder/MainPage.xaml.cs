@@ -195,9 +195,9 @@ namespace pcBuilder
             }
         }
 
-        private void Clicked(object sender, EventArgs e)
+        async void Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new Recibo());
+            await Navigation.PushAsync(new NavigationPage(new Recibo()));
         }
     }  
 }

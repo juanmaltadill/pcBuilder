@@ -19,7 +19,7 @@ namespace pcBuilder
 
         private void onClick(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MainPage());
+            Navigation.PushAsync(new MainPage());
         }
     }
 }
