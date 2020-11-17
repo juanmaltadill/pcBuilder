@@ -33,6 +33,7 @@
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
                             <Label Grid.RowSpan="2"
                                    Text="{Binding Marca}"
@@ -59,7 +60,7 @@
         </ListView>
                                                   <!--BOQUE PROCESADORES-->
         <Frame x:Name="frameProcesadores" 
-               Style="{StaticResource listViewStyle}">
+               Style="{StaticResource frameStyle}">
             <Label WidthRequest="40" 
                    Text="Procesadores" 
                    HorizontalTextAlignment="Center"
@@ -110,7 +111,7 @@
         </ListView>
                                             <!--BOQUE MEMORIAS RAM-->
         <Frame x:Name="frameRams" 
-               Style="{StaticResource listViewStyle}">
+               Style="{StaticResource frameStyle}">
             <Label WidthRequest="40" 
                    Text="Memorias RAM" 
                    HorizontalTextAlignment="Center"
@@ -160,7 +161,7 @@
         </ListView>
                                      <!--BOQUE DISCOS DUROS-->
         <Frame x:Name="frameHdds" 
-               Style="{StaticResource listViewStyle}">
+               Style="{StaticResource frameStyle}">
             <Label WidthRequest="40" 
                    Text="Discos Duros" 
                    HorizontalTextAlignment="Center"
@@ -210,8 +211,11 @@
         </ListView>
 
         <Button Text="Realizar Compra"
+                Padding="0,20"
+                Margin="0,40"
                 HorizontalOptions="Center"
                 WidthRequest="300"
-                Clicked="Clicked"/>
+                Clicked="Clicked"
+                BackgroundColor="Silver"/>
     </StackLayout>
 </ContentPage>

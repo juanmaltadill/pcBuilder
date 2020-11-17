@@ -1,1 +1,1 @@
-C:\Users\JuanCarlos\Documents\GitHub\pcBuilder\pcBuilder\pcBuilder.UWP\pcBuilder.UWP.csproj;x86
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\pcBuilder.UWP.csproj;x86

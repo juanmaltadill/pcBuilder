@@ -143,6 +143,8 @@ namespace pcBuilder
                 Precio = 250,
             }) ;
             listHdds.BindingContext = this;
+
+            
         }
 
         private void onClick(object sender, EventArgs e)

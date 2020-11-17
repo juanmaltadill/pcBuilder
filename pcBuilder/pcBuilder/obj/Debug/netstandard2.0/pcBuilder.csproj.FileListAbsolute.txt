@@ -28,3 +28,5 @@ C:\Users\JuanCarlos\Documents\GitHub\pcBuilder\pcBuilder\pcBuilder\obj\Debug\net
 C:\Users\JuanCarlos\Documents\GitHub\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\pcBuilder.pdb
 C:\Users\JuanCarlos\Documents\GitHub\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\Welcome.xaml.g.cs
 C:\Users\JuanCarlos\Documents\GitHub\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\Recibo.xaml.g.cs
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\Recibo.xaml.g.cs
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\obj\Debug\netstandard2.0\Welcome.xaml.g.cs
