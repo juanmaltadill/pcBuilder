@@ -23,7 +23,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10,10,10,10">
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
@@ -73,7 +73,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10,10,10,10">
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
@@ -124,7 +124,7 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10,10,10,10">
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
@@ -174,13 +174,16 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <Grid Padding="10,10,10,10">
+                        <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="*" />
                                 <RowDefinition Height="*" />
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
@@ -203,6 +206,21 @@
                                    Grid.Column="3"
                                    Text="{Binding Precio}"
                                    VerticalOptions="End" />
+                            <Stepper x:Name="stepperHdds"
+                                     HeightRequest="30"
+                                     Maximum="360"
+                                     Increment="1"
+                                     HorizontalOptions="Center"
+                                     Grid.Column="4"
+                                     Grid.ColumnSpan="2"
+                                     Grid.RowSpan="2"
+                                     BackgroundColor="Black"/>
+                            <Label x:Name="stepperLabel"
+                                   HeightRequest="40"
+                                   VerticalOptions="Center"
+                                   Grid.Column="6"
+                                   Text="{Binding Source={x:Reference stepperHdds}, Path=Value, StringFormat='{0:F0}'}"
+                                   Padding="0,20"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>

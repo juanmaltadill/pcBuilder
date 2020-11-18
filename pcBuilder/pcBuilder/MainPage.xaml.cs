@@ -142,6 +142,8 @@ namespace pcBuilder
                 Capacidad = "500GB",
                 Precio = 250,
             }) ;
+            Stepper stepperHdds = new Stepper();
+            var cantidad = stepperHdds.Value;
             listHdds.BindingContext = this;
 
             

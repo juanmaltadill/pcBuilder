@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-17T20:10:01.343</Modified>
+      <Modified>2020-11-18T20:31:53.912</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\pcBuilder.UWP.exe">
       <PackagePath>entrypoint\pcBuilder.UWP.exe</PackagePath>
-      <Modified>2020-11-17T20:10:00.083</Modified>
+      <Modified>2020-11-18T20:31:52.728</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.9\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -720,7 +720,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\bin\Debug\netstandard2.0\pcBuilder.dll">
       <PackagePath>pcBuilder.dll</PackagePath>
-      <Modified>2020-11-17T20:22:13.812</Modified>
+      <Modified>2020-11-18T20:38:31.386</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -879,11 +879,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-11-17T20:09:59.925</Modified>
+      <Modified>2020-11-18T20:31:52.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-11-17T20:09:59.926</Modified>
+      <Modified>2020-11-18T20:31:52.581</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -899,11 +899,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-11-13T07:38:37.753</Modified>
+      <Modified>2020-11-18T20:09:21.606</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\Core\pcBuilder.UWP.exe">
       <PackagePath>pcBuilder.UWP.exe</PackagePath>
-      <Modified>2020-11-17T20:10:01.334</Modified>
+      <Modified>2020-11-18T20:31:53.908</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
