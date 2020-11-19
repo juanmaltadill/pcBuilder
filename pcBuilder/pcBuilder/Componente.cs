@@ -38,6 +38,8 @@ namespace pcBuilder
         public string Modelo { get; set; }
         public string Capacidad { get; set; }
         public int Precio { get; set; }
+        public int Cantidad { get; set; }
+
     }
 
 }

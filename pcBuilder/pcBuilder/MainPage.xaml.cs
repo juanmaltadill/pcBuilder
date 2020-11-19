@@ -13,10 +13,11 @@ namespace pcBuilder
 {
     public partial class MainPage : ContentPage
     {
-       public IList<Grafica> Graficas { get; set; }
-       public IList<Procesador> Procesadores { get; set; }
-       public IList<Ram> Rams { get; set; }
-       public IList<Hdd> Hdds { get; set; }
+       public ObservableCollection<Grafica> Graficas { get; set; }
+       public ObservableCollection<Procesador> Procesadores { get; set; }
+       public ObservableCollection<Ram> Rams { get; set; }
+       public ObservableCollection<Hdd> Hdds { get; set; }
+       
 
 
         public MainPage()
@@ -39,7 +40,7 @@ namespace pcBuilder
             boxTapHandlerHdds.Tapped += onClick;
             frameHdds.GestureRecognizers.Add(boxTapHandlerHdds);
 
-            Graficas = new List<Grafica>();
+            Graficas = new ObservableCollection<Grafica>();
             Graficas.Add(new Grafica
             {
                 Tipo = "Tarjeta Gráfica",
@@ -63,7 +64,7 @@ namespace pcBuilder
             });
             listGraficas.BindingContext = this;
 
-            Procesadores = new List<Procesador>();
+            Procesadores = new ObservableCollection<Procesador>();
             Procesadores.Add(new Procesador
             {
                 Tipo = "Procesador",
@@ -90,7 +91,7 @@ namespace pcBuilder
             });
             listProcesadores.BindingContext = this;
 
-            Rams = new List<Ram>();
+            Rams = new ObservableCollection<Ram>();
             Rams.Add(new Ram
             {
                 Tipo = "Memoria RAM",
@@ -117,7 +118,7 @@ namespace pcBuilder
             });
             listRams.BindingContext = this;
 
-            Hdds = new List<Hdd>();
+            Hdds = new ObservableCollection<Hdd>();
             Hdds.Add(new Hdd
             {
                 Tipo = "Tarjeta Gráfica",
@@ -125,6 +126,7 @@ namespace pcBuilder
                 Modelo = "GTX 1070",
                 Capacidad = "500GB",
                 Precio = 250,
+                Cantidad = 0,
             });
             Hdds.Add(new Hdd
             {
@@ -133,6 +135,7 @@ namespace pcBuilder
                 Modelo = "GTX 1060",
                 Capacidad = "500GB",
                 Precio = 250,
+                Cantidad = 0,
             });
             Hdds.Add(new Hdd
             {
@@ -141,12 +144,10 @@ namespace pcBuilder
                 Modelo = "GTX 1080",
                 Capacidad = "500GB",
                 Precio = 250,
-            }) ;
-            Stepper stepperHdds = new Stepper();
-            var cantidad = stepperHdds.Value;
+                Cantidad = 0,
+            });
             listHdds.BindingContext = this;
 
-            
         }
 
         private void onClick(object sender, EventArgs e)
@@ -197,9 +198,22 @@ namespace pcBuilder
             }
         }
 
+        
+
         async void Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new NavigationPage(new Recibo()));
+        }
+
+        public void onMenosHddClicked(object sender, EventArgs e)
+        {
+            var cantidad = Hdds[0];
+            cantidad.Cantidad++;
+        }
+
+        public void onMasHddClicked(object sender, EventArgs e)
+        {
+
         }
     }  
 }

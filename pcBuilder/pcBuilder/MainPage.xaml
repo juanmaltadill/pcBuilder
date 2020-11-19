@@ -206,21 +206,29 @@
                                    Grid.Column="3"
                                    Text="{Binding Precio}"
                                    VerticalOptions="End" />
-                            <Stepper x:Name="stepperHdds"
-                                     HeightRequest="30"
-                                     Maximum="360"
-                                     Increment="1"
-                                     HorizontalOptions="Center"
-                                     Grid.Column="4"
-                                     Grid.ColumnSpan="2"
-                                     Grid.RowSpan="2"
-                                     BackgroundColor="Black"/>
-                            <Label x:Name="stepperLabel"
-                                   HeightRequest="40"
+                            <Button x:Name="btnMenosHdd"
+                                    Text="-"
+                                    Clicked="onMenosHddClicked"
+                                    BackgroundColor="White"
+                                    Grid.Column="4"
+                                    Grid.RowSpan="2"
+                                    HeightRequest="30"
+                                    WidthRequest="5"/>
+                            <Label x:Name="labelCantidadHdd"
+                                   Grid.Column="5"
+                                   Grid.RowSpan="2"
                                    VerticalOptions="Center"
-                                   Grid.Column="6"
-                                   Text="{Binding Source={x:Reference stepperHdds}, Path=Value, StringFormat='{0:F0}'}"
-                                   Padding="0,20"/>
+                                   HorizontalOptions="Center"
+                                   TextColor="black"
+                                   Text="{Binding Cantidad}"/>
+                            <Button x:Name="btnMasHdd"
+                                    Text="+"
+                                    Clicked="onMasHddClicked"
+                                    BackgroundColor="White"
+                                    Grid.Column="6"
+                                    Grid.RowSpan="2"
+                                    HeightRequest="30"
+                                    WidthRequest="5"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
