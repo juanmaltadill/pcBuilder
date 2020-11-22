@@ -2,11 +2,42 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pcBuilder.Recibo">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Resumen de compra"
+
+    <StackLayout>
+        <Label Text="Resumen de compra"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+        <ListView IsVisible="true"
+                  HasUnevenRows="True"
+                  Style="{StaticResource listViewStyle}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="Total de la compra: "
+                                    Grid.Column="0"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Text="Total de la compra: "
+                        HeightRequest="20"
+                        WidthRequest="200"
+                        Grid.Column="1"/>
+            <Label x:Name="labelTotal"
+                        Text="0"
+                        HeightRequest="40"
+                        WidthRequest="200"
+                        Grid.Column="2"/>
+        </Grid>
+    </StackLayout>
 </ContentPage>

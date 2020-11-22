@@ -8,6 +8,7 @@ namespace pcBuilder
     {
         public App()
         {
+            
             InitializeComponent();
             MainPage = new NavigationPage(new Welcome());
             

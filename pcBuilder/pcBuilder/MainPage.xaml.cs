@@ -47,6 +47,7 @@ namespace pcBuilder
                 Marca = "Nvidia",
                 Modelo = "GTX 1070",
                 Precio = 250,
+                Cantidad = 0,
             });
             Graficas.Add(new Grafica
             {
@@ -54,6 +55,7 @@ namespace pcBuilder
                 Marca = "Nvidia",
                 Modelo = "GTX 1060",
                 Precio = 250,
+                Cantidad = 0,
             });
             Graficas.Add(new Grafica
             {
@@ -61,6 +63,7 @@ namespace pcBuilder
                 Marca = "Nvidia",
                 Modelo = "GTX 1080",
                 Precio = 250,
+                Cantidad = 0,
             });
             listGraficas.BindingContext = this;
 
@@ -72,6 +75,7 @@ namespace pcBuilder
                 Modelo = "i9",
                 Velocidad = "4.5GHz",
                 Precio = 250,
+                Cantidad = 0,
             });
             Procesadores.Add(new Procesador
             {
@@ -80,6 +84,7 @@ namespace pcBuilder
                 Modelo = "i7",
                 Velocidad = "3.5GHz",
                 Precio = 250,
+                Cantidad = 0,
             });
             Procesadores.Add(new Procesador
             {
@@ -88,6 +93,7 @@ namespace pcBuilder
                 Modelo = "i5",
                 Velocidad = "2.5GHz",
                 Precio = 250,
+                Cantidad = 0,
             });
             listProcesadores.BindingContext = this;
 
@@ -99,6 +105,7 @@ namespace pcBuilder
                 Modelo = "158956",
                 Velocidad = "2.5GHz",
                 Precio = 250,
+                Cantidad = 0,
             });
             Rams.Add(new Ram
             {
@@ -107,6 +114,7 @@ namespace pcBuilder
                 Modelo = "358721",
                 Velocidad = "2.5GHz",
                 Precio = 250,
+                Cantidad = 0,
             });
             Rams.Add(new Ram
             {
@@ -115,6 +123,7 @@ namespace pcBuilder
                 Modelo = "96857412365",
                 Velocidad = "2.5GHz",
                 Precio = 250,
+                Cantidad = 0,
             });
             listRams.BindingContext = this;
 
@@ -196,24 +205,44 @@ namespace pcBuilder
                     listHdds.IsVisible = false;
                 }
             }
+        }  
+        public void onItemSelected()
+        {
+            ListView listview = new ListView();
+        }
+        public void Clicked(object Sender, EventArgs e)
+        {
+            
+            Navigation.PushAsync(new Recibo());
         }
 
-        
-
-        async void Clicked(object sender, EventArgs e)
+        public void onMenosClicked(object Sender, EventArgs e)
         {
-            await Navigation.PushAsync(new NavigationPage(new Recibo()));
+            Button button = (Button)Sender;
+            Grid listViewItem = (Grid)button.Parent;
+            Label label = (Label)listViewItem.Children[6];
+
+            var cantidad = Int32.Parse(label.Text) ;
+            cantidad--;
+            if (cantidad < 0)
+            {
+                label.Text = "0";
+            }
+            else
+            {
+                label.Text = cantidad.ToString();
+            }
         }
 
-        public void onMenosHddClicked(object sender, EventArgs e)
+        public void onMasClicked(object Sender, EventArgs e)
         {
-            var cantidad = Hdds[0];
-            cantidad.Cantidad++;
-        }
+            Button button = (Button)Sender;
+            Grid listViewItem = (Grid)button.Parent;
+            Label label = (Label)listViewItem.Children[6];
 
-        public void onMasHddClicked(object sender, EventArgs e)
-        {
-
+            var cantidad = Int32.Parse(label.Text);
+            cantidad++;
+            label.Text = cantidad.ToString();
         }
     }  
 }

@@ -10,6 +10,7 @@ namespace pcBuilder
         public string Marca { get; set; }
         public string Modelo { get; set; }
         public int Precio { get; set; }
+        public int Cantidad { get; set; }
     }
 
     public class Procesador
@@ -19,6 +20,7 @@ namespace pcBuilder
         public string Modelo { get; set; }
         public string Velocidad { get; set; }
         public int Precio { get; set; }
+        public int Cantidad { get; set; }
     }
 
     public class Ram
@@ -29,6 +31,7 @@ namespace pcBuilder
         public string Capacidad { get; set; }
         public string Velocidad { get; set; }
         public int Precio { get; set; }
+        public int Cantidad { get; set; }
     }
 
     public class Hdd
