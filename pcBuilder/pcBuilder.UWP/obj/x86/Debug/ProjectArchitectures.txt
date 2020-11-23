@@ -1,0 +1,1 @@
+C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\pcBuilder.UWP.csproj;x86

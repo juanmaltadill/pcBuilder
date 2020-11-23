@@ -17,8 +17,11 @@ namespace pcBuilder
        public ObservableCollection<Procesador> Procesadores { get; set; }
        public ObservableCollection<Ram> Rams { get; set; }
        public ObservableCollection<Hdd> Hdds { get; set; }
-       
 
+        public ObservableCollection<Grafica> pedidoGraficas { get; set; }
+        public ObservableCollection<Procesador> pedidoProcesadores { get; set; }
+        public ObservableCollection<Ram> pedidoRams { get; set; }
+        public ObservableCollection<Hdd> pedidoHdds { get; set; }
 
         public MainPage()
         {
@@ -206,14 +209,29 @@ namespace pcBuilder
                 }
             }
         }  
-        public void onItemSelected()
-        {
-            ListView listview = new ListView();
-        }
         public void Clicked(object Sender, EventArgs e)
-        {
-            
-            Navigation.PushAsync(new Recibo());
+        { 
+            pedidoGraficas = new ObservableCollection<Grafica>();
+            pedidoProcesadores = new ObservableCollection<Procesador>();
+            pedidoRams = new ObservableCollection<Ram>();
+            pedidoHdds = new ObservableCollection<Hdd>();
+
+            int contadorGraficas = Graficas.Count();
+            for(int i=0; i<contadorGraficas; i++)
+            {
+                if(Graficas[i].Cantidad > 0)
+                {
+                    Console.WriteLine(Graficas[i].Marca);
+                    pedidoGraficas.Add( new Grafica { 
+                        Tipo = Graficas[i].Tipo,
+                        Modelo = Graficas[i].Modelo,
+                        Marca = Graficas[i].Marca,
+                        Precio = Graficas[i].Precio,
+                        Cantidad = Graficas[i].Cantidad,
+                    });
+                }
+            }
+            Navigation.PushAsync(new Recibo(pedidoGraficas));
         }
 
         public void onMenosClicked(object Sender, EventArgs e)
@@ -224,7 +242,7 @@ namespace pcBuilder
 
             var cantidad = Int32.Parse(label.Text) ;
             cantidad--;
-            if (cantidad < 0)
+            if (cantidad <= 0)
             {
                 label.Text = "0";
             }

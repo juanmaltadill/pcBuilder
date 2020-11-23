@@ -2,42 +2,78 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pcBuilder.Recibo">
-
-    <StackLayout>
-        <Label Text="Resumen de compra"
-                VerticalOptions="CenterAndExpand" 
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Resumen de compra"
+                VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
-        <ListView IsVisible="true"
+
+            <ListView IsVisible="true" 
+                  x:Name="listPedidoGraficas" 
+                  ItemsSource="{Binding pedidoGraficas}" 
+                  Style="{StaticResource listViewStyle}"
                   HasUnevenRows="True"
-                  Style="{StaticResource listViewStyle}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <Label Text="Total de la compra: "
-                                    Grid.Column="0"/>
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Label Text="Total de la compra: "
+                  HeightRequest="70">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Column="1"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                                <Label x:Name="labelCantidad"
+                                   Grid.Column="5"
+                                   Grid.RowSpan="2"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="black"
+                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Total de la compra: "
                         HeightRequest="20"
                         WidthRequest="200"
                         Grid.Column="1"/>
-            <Label x:Name="labelTotal"
+                <Label x:Name="labelTotal"
                         Text="0"
                         HeightRequest="40"
                         WidthRequest="200"
                         Grid.Column="2"/>
-        </Grid>
-    </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+    
 </ContentPage>
