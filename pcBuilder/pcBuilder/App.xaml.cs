@@ -8,9 +8,10 @@ namespace pcBuilder
     {
         public App()
         {
+            
             InitializeComponent();
-
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Welcome());
+            
         }
 
         protected override void OnStart()

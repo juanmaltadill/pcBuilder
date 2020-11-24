@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-11T16:10:28.405</Modified>
+      <Modified>2020-11-24T17:40:52.165</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\pcBuilder.UWP.exe">
       <PackagePath>entrypoint\pcBuilder.UWP.exe</PackagePath>
-      <Modified>2020-11-11T16:10:26.878</Modified>
+      <Modified>2020-11-24T17:40:50.794</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\.nuget\packages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.1.9\runtimes\win10-x86\nativeassets\uap10.0.15138\clrcompression.dll">
       <PackagePath>clrcompression.dll</PackagePath>
@@ -720,7 +720,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder\bin\Debug\netstandard2.0\pcBuilder.dll">
       <PackagePath>pcBuilder.dll</PackagePath>
-      <Modified>2020-11-11T16:39:21.486</Modified>
+      <Modified>2020-11-24T17:48:52.624</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -737,153 +737,153 @@
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\LargeTile.scale-100.png">
       <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.072</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\LargeTile.scale-200.png">
       <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.074</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\LargeTile.scale-400.png">
       <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.080</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\SmallTile.scale-100.png">
       <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.081</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\SmallTile.scale-200.png">
       <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.083</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\SmallTile.scale-400.png">
       <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.085</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.087</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.089</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\SplashScreen.scale-400.png">
       <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.092</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square150x150Logo.scale-100.png">
       <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.102</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.104</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square150x150Logo.scale-400.png">
       <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.106</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.108</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.110</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.112</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.scale-100.png">
       <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.116</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.126</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.scale-400.png">
       <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.128</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.targetsize-16.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.130</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.targetsize-256.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.132</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Square44x44Logo.targetsize-48.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.134</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.137</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\StoreLogo.scale-200.png">
       <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.141</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\StoreLogo.scale-400.png">
       <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.143</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Wide310x150Logo.scale-100.png">
       <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.145</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.150</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-11-09T14:19:15.217</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2020-11-09T14:19:15.220</Modified>
+      <Modified>2020-11-23T19:51:11.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\pcBuilder.UWP.xr.xml">
       <PackagePath>pcBuilder.UWP.xr.xml</PackagePath>
-      <Modified>2020-11-10T13:49:02.265</Modified>
+      <Modified>2020-11-24T16:52:16.662</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-11-11T16:10:26.711</Modified>
+      <Modified>2020-11-24T17:40:50.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-11-11T16:10:26.712</Modified>
+      <Modified>2020-11-24T17:40:50.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0\\redist\Debug\x86\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -899,11 +899,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2020-11-10T13:49:08.342</Modified>
+      <Modified>2020-11-24T16:52:29.558</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Usuario\source\repos\pcBuilder\pcBuilder\pcBuilder.UWP\bin\x86\Debug\Core\pcBuilder.UWP.exe">
       <PackagePath>pcBuilder.UWP.exe</PackagePath>
-      <Modified>2020-11-11T16:10:28.399</Modified>
+      <Modified>2020-11-24T17:40:52.161</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

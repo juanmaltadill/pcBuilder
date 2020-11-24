@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pcBuilder.Welcome">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Bienvenido al selector de piezas para PC"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                Margin="0,200,0,0"/>
+            <Label Text="Pulse el botón para comenzar la compra"
+                   VerticalOptions="Center"
+                   HorizontalOptions="CenterAndExpand"
+                   Margin="0,20"/>
+            <Button Text="Iniciar compra"
+                    x:Name="iniciar"
+                    TextColor="White"
+                    HorizontalOptions="Center"
+                    Clicked="onClick"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

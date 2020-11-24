@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pcBuilder.Recibo">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Resumen de compra"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Graficas"
+                   HorizontalOptions="Center"/>
+            <ListView IsVisible="true" 
+                  x:Name="listPedidoGraficas" 
+                  ItemsSource="{Binding listaGraficas}" 
+                  Style="{StaticResource listViewStyle}"
+                  HasUnevenRows="True"
+                  HeightRequest="70">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Column="1"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                                <Button Text="Borrar" 
+                                        x:Name="borrarGrafica"
+                                        CommandParameter="{Binding .}"
+                                        Grid.Column="4"
+                                        WidthRequest="20"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Red"
+                                        FontSize="10"
+                                        Clicked="onDeleteGrafica"/>
+                                <Label x:Name="labelCantidad"
+                                   Grid.Column="5"
+                                   Grid.RowSpan="2"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="black"
+                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="Procesadores"
+                   HorizontalOptions="Center"/>
+            <ListView IsVisible="true" 
+                  x:Name="listPedidoProcesadores" 
+                  ItemsSource="{Binding listaProcesadores}" 
+                  Style="{StaticResource listViewStyle}"
+                  HasUnevenRows="True"
+                  HeightRequest="70">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Column="2"
+                                   Text="{Binding Velocidad}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                                <Button Text="Borrar"
+                                        x:Name="borrarProcesador"
+                                        CommandParameter="{Binding .}"
+                                        Grid.Column="4"
+                                        WidthRequest="20"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Red"
+                                        FontSize="10"
+                                        Clicked="onDeleteProcesador"/>
+                                <Label x:Name="labelCantidad"
+                                   Grid.Column="5"
+                                   Grid.RowSpan="2"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="black"
+                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="RAMs"
+                   HorizontalOptions="Center"/>
+            <ListView IsVisible="true" 
+                  x:Name="listPedidoRams" 
+                  ItemsSource="{Binding listaRams}" 
+                  Style="{StaticResource listViewStyle}"
+                  HasUnevenRows="True"
+                  HeightRequest="70">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Column="2"
+                                   Text="{Binding Velocidad}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                                <Button Text="Borrar"
+                                        CommandParameter="{Binding .}"
+                                        x:Name="borrarRam"
+                                        Grid.Column="4"
+                                        WidthRequest="20"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Red"
+                                        FontSize="10"
+                                        Clicked="onDeleteRam"/>
+                                <Label x:Name="labelCantidad"
+                                   Grid.Column="5"
+                                   Grid.RowSpan="2"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="black"
+                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label Text="HDDs"
+                   HorizontalOptions="Center"/>
+            <ListView IsVisible="true" 
+                  x:Name="listPedidoHdds" 
+                  ItemsSource="{Binding listaHdds}" 
+                  Style="{StaticResource listViewStyle}"
+                  HasUnevenRows="True"
+                  HeightRequest="70">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.RowSpan="2"
+                                   Text="{Binding Marca}"
+                                   HeightRequest="60"
+                                   WidthRequest="60" />
+                                <Label Grid.Column="1"
+                                   Text="{Binding Modelo}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Column="2"
+                                   Text="{Binding Capacidad}"
+                                   FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   Text="{Binding Tipo}"
+                                   VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                   Grid.Column="3"
+                                   Text="{Binding Precio}"
+                                   VerticalOptions="End" />
+                                <Button Text="Borrar"
+                                        x:Name="borrarHdd"
+                                        CommandParameter="{Binding .}"
+                                        Grid.Column="4"
+                                        WidthRequest="20"
+                                        HeightRequest="30"
+                                        VerticalOptions="Center"
+                                        BackgroundColor="Red"
+                                        FontSize="10"
+                                        Clicked="onDeleteHdd"/>
+                                <Label x:Name="labelCantidad"
+                                   Grid.Column="5"
+                                   Grid.RowSpan="2"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center"
+                                   TextColor="black"
+                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid VerticalOptions="End">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Total de la compra: "
+                        HeightRequest="20"
+                        WidthRequest="200"
+                        Grid.Column="1"/>
+                <Label x:Name="labelTotal"
+                        Text="{Binding cantidadTotal, Mode=TwoWay}"
+                        HeightRequest="40"
+                        WidthRequest="200"
+                        Grid.Column="2"/>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

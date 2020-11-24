@@ -14,6 +14,7 @@ namespace pcBuilder.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            global::Xamarin.Forms.Forms.SetFlags("SwipeView_Experimental");
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
