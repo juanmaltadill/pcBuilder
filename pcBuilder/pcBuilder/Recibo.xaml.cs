@@ -53,41 +53,57 @@ namespace pcBuilder
            
         }
 
-        private void onDeleteGrafica(object Sender, EventArgs e)
+        private async void onDeleteGrafica(object Sender, EventArgs e)
         {
-            Button boton = (Button)Sender;
-      
-            var grafica = (Grafica)boton?.CommandParameter;
-            this.cantidadTotal = this.cantidadTotal - grafica.Precio*grafica.Cantidad;
-            labelTotal.Text = this.cantidadTotal.ToString();
-            listaGraficas.Remove(grafica);
+            bool respuesta = await DisplayAlert("¿Eliminar producto?", "Si pulsa sí, borrará el producto de la cesta", "Si", "No");
+            if (respuesta)
+            {
+                Button boton = (Button)Sender;
+                var grafica = (Grafica)boton?.CommandParameter;
+                this.cantidadTotal = this.cantidadTotal - grafica.Precio * grafica.Cantidad;
+                labelTotal.Text = this.cantidadTotal.ToString();
+                listaGraficas.Remove(grafica);
+            }
+            
         }
-        private void onDeleteProcesador(object Sender, EventArgs e)
+        private async void onDeleteProcesador(object Sender, EventArgs e)
         {
-            Button boton = (Button)Sender;
-
-            var procesador = (Procesador)boton?.CommandParameter;
-            this.cantidadTotal = this.cantidadTotal - procesador.Precio*procesador.Cantidad;
-            labelTotal.Text = this.cantidadTotal.ToString();
-            listaProcesadores.Remove(procesador);
+            bool respuesta = await DisplayAlert("¿Eliminar producto?", "Si pulsa sí, borrará el producto de la cesta", "Si", "No");
+            if (respuesta)
+            {
+                Button boton = (Button)Sender;
+                var procesador = (Procesador)boton?.CommandParameter;
+                this.cantidadTotal = this.cantidadTotal - procesador.Precio * procesador.Cantidad;
+                labelTotal.Text = this.cantidadTotal.ToString();
+                listaProcesadores.Remove(procesador);
+            }
+           
         }
-        private void onDeleteRam(object Sender, EventArgs e)
+        private async void onDeleteRam(object Sender, EventArgs e)
         {
-            Button boton = (Button)Sender;
-
-            var ram = (Ram)boton?.CommandParameter;
-            this.cantidadTotal = this.cantidadTotal - ram.Precio*ram.Cantidad;
-            labelTotal.Text = this.cantidadTotal.ToString();
-            listaRams.Remove(ram);
+            bool respuesta = await DisplayAlert("¿Eliminar producto?", "Si pulsa sí, borrará el producto de la cesta", "Si", "No");
+            if (respuesta)
+            {
+                Button boton = (Button)Sender;
+                var ram = (Ram)boton?.CommandParameter;
+                this.cantidadTotal = this.cantidadTotal - ram.Precio * ram.Cantidad;
+                labelTotal.Text = this.cantidadTotal.ToString();
+                listaRams.Remove(ram);
+            }
+           
         }
-        private void onDeleteHdd(object Sender, EventArgs e)
+        private async void onDeleteHdd(object Sender, EventArgs e)
         {
-            Button boton = (Button)Sender;
-
-            var hdd = (Hdd)boton?.CommandParameter;
-            this.cantidadTotal = cantidadTotal - hdd.Precio*hdd.Cantidad;
-            labelTotal.Text = this.cantidadTotal.ToString();
-            listaHdds.Remove(hdd);
+            bool respuesta = await DisplayAlert("¿Eliminar producto?", "Si pulsa sí, borrará el producto de la cesta", "Si", "No");
+            if (respuesta)
+            {
+                Button boton = (Button)Sender;
+                var hdd = (Hdd)boton?.CommandParameter;
+                this.cantidadTotal = cantidadTotal - hdd.Precio * hdd.Cantidad;
+                labelTotal.Text = this.cantidadTotal.ToString();
+                listaHdds.Remove(hdd);
+            }
+            
         }
 
 

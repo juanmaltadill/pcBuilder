@@ -51,6 +51,7 @@ namespace pcBuilder
                 Modelo = "GTX 1060",
                 Precio = 150,
                 Cantidad = 0,
+                Imagen= "https://images-na.ssl-images-amazon.com/images/I/71lggpcUGnL._AC_SL1108_.jpg",
             });
             Graficas.Add(new Grafica
             {
@@ -59,6 +60,7 @@ namespace pcBuilder
                 Modelo = "GTX 1070",
                 Precio = 175,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/51UyVE6HJ-L._AC_.jpg",
             });
             Graficas.Add(new Grafica
             {
@@ -67,6 +69,7 @@ namespace pcBuilder
                 Modelo = "GTX 1080",
                 Precio = 250,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/51-6p%2BF1TPL._AC_.jpg",
             });
             listGraficas.BindingContext = this;
 
@@ -79,6 +82,7 @@ namespace pcBuilder
                 Velocidad = "4.5GHz",
                 Precio = 250,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/61jXcMjtvUL._AC_SL1080_.jpg",
             });
             Procesadores.Add(new Procesador
             {
@@ -88,6 +92,7 @@ namespace pcBuilder
                 Velocidad = "3.5GHz",
                 Precio = 250,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/717j%2Bx%2BsAFL._AC_SL1500_.jpg",
             });
             Procesadores.Add(new Procesador
             {
@@ -97,6 +102,7 @@ namespace pcBuilder
                 Velocidad = "2.5GHz",
                 Precio = 250,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/71CgBgacAsL._AC_SL1500_.jpg",
             });
             listProcesadores.BindingContext = this;
 
@@ -107,8 +113,9 @@ namespace pcBuilder
                 Marca = "Corsair",
                 Modelo = "158956",
                 Velocidad = "4000Mhz",
-                Precio = 250,
+                Precio = 50,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/41AGvSmY-fL._AC_SX425_.jpg",
             });
             Rams.Add(new Ram
             {
@@ -116,8 +123,9 @@ namespace pcBuilder
                 Marca = "Corsair",
                 Modelo = "358721",
                 Velocidad = "3500Mhz",
-                Precio = 250,
+                Precio = 150,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/815scD4jW9L._AC_SL1500_.jpg",
             });
             Rams.Add(new Ram
             {
@@ -127,6 +135,7 @@ namespace pcBuilder
                 Velocidad = "3000Mhz",
                 Precio = 250,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/51112dPwE4L._AC_SL1000_.jpg",
             });
             listRams.BindingContext = this;
 
@@ -139,6 +148,7 @@ namespace pcBuilder
                 Capacidad = "500GB",
                 Precio = 75,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/71x2h55zNpL._AC_SL1500_.jpg",
             });
             Hdds.Add(new Hdd
             {
@@ -148,6 +158,7 @@ namespace pcBuilder
                 Capacidad = "1TB",
                 Precio = 125,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/41ji7olXWEL._AC_.jpg",
             });
             Hdds.Add(new Hdd
             {
@@ -157,6 +168,7 @@ namespace pcBuilder
                 Capacidad = "2TB",
                 Precio = 300,
                 Cantidad = 0,
+                Imagen = "https://images-na.ssl-images-amazon.com/images/I/91JA5-hAnoL._AC_SL1500_.jpg",
             });
             listHdds.BindingContext = this;
 
@@ -221,12 +233,14 @@ namespace pcBuilder
             {
                 if(Graficas[i].Cantidad > 0)
                 {
-                    pedidoGraficas.Add( new Grafica { 
+                    pedidoGraficas.Add(new Grafica
+                    {
                         Tipo = Graficas[i].Tipo,
                         Modelo = Graficas[i].Modelo,
                         Marca = Graficas[i].Marca,
                         Precio = Graficas[i].Precio,
                         Cantidad = Graficas[i].Cantidad,
+                        Imagen = Graficas[i].Imagen,
                     });
                 }
             }
@@ -244,6 +258,7 @@ namespace pcBuilder
                         Velocidad = Procesadores[i].Velocidad,
                         Precio = Procesadores[i].Precio,
                         Cantidad = Procesadores[i].Cantidad,
+                        Imagen = Procesadores[i].Imagen,
                     });
                 }
             }
@@ -262,6 +277,7 @@ namespace pcBuilder
                         Velocidad = Rams[i].Velocidad,
                         Precio = Rams[i].Precio,
                         Cantidad = Rams[i].Cantidad,
+                        Imagen = Rams[i].Imagen,
                     });
                 }
             }
@@ -279,6 +295,7 @@ namespace pcBuilder
                         Capacidad = Hdds[i].Capacidad,
                         Precio = Hdds[i].Precio,
                         Cantidad = Hdds[i].Cantidad,
+                        Imagen = Hdds[i].Imagen,
                     });
                 }
             }
@@ -290,7 +307,7 @@ namespace pcBuilder
         {
             Button button = (Button)Sender;
             Grid listViewItem = (Grid)button.Parent;
-            Label label = (Label)listViewItem.Children[6];
+            Label label = (Label)listViewItem.Children[0];
 
             var cantidad = Int32.Parse(label.Text) ;
             cantidad--;
@@ -308,7 +325,7 @@ namespace pcBuilder
         {
             Button button = (Button)Sender;
             Grid listViewItem = (Grid)button.Parent;
-            Label label = (Label)listViewItem.Children[6];
+            Label label = (Label)listViewItem.Children[0];
 
             var cantidad = Int32.Parse(label.Text);
             cantidad++;

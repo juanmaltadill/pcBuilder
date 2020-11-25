@@ -13,6 +13,7 @@ namespace pcBuilder
         private string modelo;
         private int precio;
         private int cantidad;
+        private string imagen;
         public string Tipo
         {
             get { return tipo; }
@@ -42,6 +43,15 @@ namespace pcBuilder
                 OnPropertyChanged("Cantidad");
             }
         }
+        public string Imagen
+        {
+            get { return imagen; }
+            set
+            {
+                imagen = value;
+                OnPropertyChanged("Imagen");
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -62,6 +72,7 @@ namespace pcBuilder
         private string modelo;
         private string velocidad;
         private int precio;
+        private string imagen;
         private int cantidad;
         public string Tipo
         {
@@ -95,6 +106,16 @@ namespace pcBuilder
             { 
                 cantidad = value;
                 OnPropertyChanged("Cantidad");
+            }
+
+        }
+        public string Imagen
+        {
+            get { return imagen; }
+            set
+            {
+                imagen = value;
+                OnPropertyChanged("Imagen");
             }
         }
 
@@ -118,6 +139,7 @@ namespace pcBuilder
         private string velocidad;
         private int precio;
         private int cantidad;
+        private string imagen;
         public string Tipo
         {
             get { return tipo; }
@@ -157,6 +179,15 @@ namespace pcBuilder
                 OnPropertyChanged("Cantidad");
             }
         }
+        public string Imagen
+        {
+            get { return imagen; }
+            set
+            {
+                imagen = value;
+                OnPropertyChanged("Imagen");
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -177,6 +208,7 @@ namespace pcBuilder
         private string capacidad;
         private int precio;
         private int cantidad;
+        private string imagen;
         public string Tipo
         {
             get { return tipo; }
@@ -209,6 +241,15 @@ namespace pcBuilder
             { 
                 cantidad = value;
                 OnPropertyChanged("Cantidad");
+            }
+        }
+        public string Imagen
+        {
+            get { return imagen; }
+            set
+            {
+                imagen = value;
+                OnPropertyChanged("Imagen");
             }
         }
 

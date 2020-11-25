@@ -4,88 +4,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pcBuilder.MainPage"
              xmlns:m="clr-namespace:pcBuilder">
-    <ContentPage.Resources>
-        <m:Grafica x:Key="grafica"/>
-        <m:Procesador x:Key="procesador"/>
-        <m:Ram x:Key="ram"/>
-        <m:Hdd x:Key="hdd"/>
-    </ContentPage.Resources>
+
     <ScrollView>
         <StackLayout>
             <Label Text="Seleccionador de Componentes para Ordenador"
-               Padding="0,20"
-               HorizontalOptions="Center"/>
+                   Padding="0,20"
+                   HorizontalOptions="Center"/>
             <!--BOQUE TARJETAS GRÁFICAS-->
             <Frame x:Name="frameGraficas" 
-               Style="{StaticResource frameStyle}"
-               HeightRequest="60">
+                   Style="{StaticResource frameStyle}"
+                   HeightRequest="60">
                 <Label WidthRequest="40" 
-                   Text="Tarjetas Gráficas" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"/>
+                       Text="Tarjetas Gráficas" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
             </Frame>
 
             <ListView IsVisible="false" 
-                  x:Name="listGraficas" 
-                  ItemsSource="{Binding Graficas}" 
-                  Style="{StaticResource listViewStyle}"
-                  HasUnevenRows="True"
-                  HeightRequest="250">
+                      x:Name="listGraficas" 
+                      ItemsSource="{Binding Graficas}" 
+                      Style="{StaticResource listViewStyle}"
+                      HasUnevenRows="True"
+                      HeightRequest="250"
+                      SeparatorColor="Black">
                 <ListView.ItemTemplate>
                     <DataTemplate>
-                        <ViewCell>
+                        <ViewCell Height="150">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.RowSpan="2"
-                                   Text="{Binding Marca}"
-                                   HeightRequest="60"
-                                   WidthRequest="60" />
-                                <Label Grid.Column="1"
-                                   Text="{Binding Modelo}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Column="1"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="0"
-                                   Grid.ColumnSpan="2"
-                                   Text="{Binding Tipo}"
-                                   VerticalOptions="End" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="3"
-                                   Text="{Binding Precio}"
-                                   VerticalOptions="End" />
-                                <Button x:Name="btnMenosHdd"
-                                    Text="-"
-                                    Clicked="onMenosClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="4"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
                                 <Label x:Name="labelCantidad"
-                                   Grid.Column="5"
-                                   Grid.RowSpan="2"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   TextColor="black"
-                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                       Grid.Column="5"
+                                       Grid.RowSpan="2"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="black"
+                                       Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                <Image Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.RowSpan="2"
+                                       Grid.ColumnSpan="2"
+                                       Source="{Binding Imagen}"
+                                       Style="{StaticResource imageStyle}"/>
+                                <Label Text="{Binding Marca}"
+                                       HeightRequest="60"
+                                       WidthRequest="60"
+                                       Grid.Row="0"
+                                       Grid.Column="2"
+                                       VerticalTextAlignment="End"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Modelo}"
+                                       FontAttributes="Bold"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalTextAlignment="Start"/>
+                                <Label Grid.Column="1"
+                                       FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding Tipo}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="3"
+                                       Text="{Binding Precio}"
+                                       VerticalOptions="End" />
+                                <Button x:Name="btnMenosHdd"
+                                        Text="-"
+                                        Clicked="onMenosClicked"
+                                        Grid.Column="4"
+                                        Grid.RowSpan="2"
+                                        Grid.Row="0"
+                                        Style="{StaticResource buttonStyle}"/>
                                 <Button x:Name="btnMas"
-                                    Text="+"
-                                    Clicked="onMasClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="6"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
+                                        Text="+"
+                                        Clicked="onMasClicked"
+                                        Grid.Column="6"
+                                        Grid.RowSpan="2"
+                                        Style="{StaticResource buttonStyle}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -93,20 +97,21 @@
             </ListView>
             <!--BOQUE PROCESADORES-->
             <Frame x:Name="frameProcesadores" 
-               HeightRequest="60"
-               Style="{StaticResource frameStyle}">
+                   HeightRequest="60"
+                   Style="{StaticResource frameStyle}">
                 <Label WidthRequest="40" 
-                   Text="Procesadores" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"/>
+                       Text="Procesadores" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
             </Frame>
 
             <ListView IsVisible="false" 
-                  x:Name="listProcesadores" 
-                  ItemsSource="{Binding Procesadores}" 
-                  Style="{StaticResource listViewStyle}"
-                  HasUnevenRows="True"
-                  HeightRequest="250">
+                      x:Name="listProcesadores" 
+                      ItemsSource="{Binding Procesadores}" 
+                      Style="{StaticResource listViewStyle}"
+                      HasUnevenRows="True"
+                      HeightRequest="250"
+                      SeparatorColor="Black">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -116,53 +121,64 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.RowSpan="2"
-                                   Text="{Binding Marca}"
-                                   HeightRequest="60"
-                                   WidthRequest="60" />
-                                <Label Grid.Column="1"
-                                   Text="{Binding Modelo}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Column="2"
-                                   Text="{Binding Velocidad}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="0"
-                                   Grid.ColumnSpan="2"
-                                   Text="{Binding Tipo}"
-                                   VerticalOptions="End" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="3"
-                                   Text="{Binding Precio}"
-                                   VerticalOptions="End" />
-                                <Button x:Name="btnMenosHdd"
-                                    Text="-"
-                                    Clicked="onMenosClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="4"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
                                 <Label x:Name="labelCantidad"
-                                   Grid.Column="5"
-                                   Grid.RowSpan="2"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   TextColor="black"
-                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                       Grid.Column="5"
+                                       Grid.RowSpan="2"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="black"
+                                       Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                <Image Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.RowSpan="2"
+                                       Grid.ColumnSpan="2"
+                                       Source="{Binding Imagen}"
+                                       Style="{StaticResource imageStyle}"/>
+                                <Label Text="{Binding Marca}"
+                                       HeightRequest="60"
+                                       WidthRequest="60"
+                                       Grid.Row="0"
+                                       Grid.Column="2"
+                                       VerticalTextAlignment="End"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Modelo}"
+                                       FontAttributes="Bold"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalTextAlignment="Start"/>
+                                <Label Grid.Column="1"
+                                       FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding Tipo}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="0"
+                                       Grid.Column="3"
+                                       Text="{Binding Velocidad}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="3"
+                                       Text="{Binding Precio}"
+                                       VerticalOptions="End" />
+                                <Button x:Name="btnMenosHdd"
+                                        Text="-"
+                                        Clicked="onMenosClicked"
+                                        Grid.Column="4"
+                                        Grid.RowSpan="2"
+                                        Grid.Row="0"
+                                        Style="{StaticResource buttonStyle}"/>
                                 <Button x:Name="btnMas"
-                                    Text="+"
-                                    Clicked="onMasClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="6"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
+                                        Text="+"
+                                        Clicked="onMasClicked"
+                                        Grid.Column="6"
+                                        Grid.RowSpan="2"
+                                        Style="{StaticResource buttonStyle}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -170,20 +186,21 @@
             </ListView>
             <!--BOQUE MEMORIAS RAM-->
             <Frame x:Name="frameRams" 
-               Style="{StaticResource frameStyle}"
-               HeightRequest="60">
+                   Style="{StaticResource frameStyle}"
+                   HeightRequest="60">
                 <Label WidthRequest="40" 
-                   Text="Memorias RAM" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"/>
+                       Text="Memorias RAM" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
             </Frame>
 
             <ListView IsVisible="false" 
-                  x:Name="listRams" 
-                  ItemsSource="{Binding Rams}" 
-                  Style="{StaticResource listViewStyle}"
-                  HasUnevenRows="True"
-                  HeightRequest="250">
+                      x:Name="listRams" 
+                      ItemsSource="{Binding Rams}" 
+                      Style="{StaticResource listViewStyle}"
+                      HasUnevenRows="True"
+                      HeightRequest="250"
+                      SeparatorColor="Black">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -193,52 +210,64 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.RowSpan="2"
-                                   Text="{Binding Marca}"
-                                   HeightRequest="60"
-                                   WidthRequest="60" />
-                                <Label Grid.Column="1"
-                                   Text="{Binding Modelo}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Column="2"
-                                   Text="{Binding Velocidad}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="0"
-                                   Grid.ColumnSpan="2"
-                                   Text="{Binding Tipo}"
-                                   VerticalOptions="End" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="3"
-                                   Text="{Binding Precio}"
-                                   VerticalOptions="End" />
-                                <Button x:Name="btnMenosHdd"
-                                    Text="-"
-                                    Clicked="onMenosClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="4"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
                                 <Label x:Name="labelCantidad"
-                                   Grid.Column="5"
-                                   Grid.RowSpan="2"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   TextColor="black"
-                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                       Grid.Column="5"
+                                       Grid.RowSpan="2"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="black"
+                                       Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                <Image Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.RowSpan="2"
+                                       Grid.ColumnSpan="2"
+                                       Source="{Binding Imagen}"
+                                       Style="{StaticResource imageStyle}"/>
+                                <Label Text="{Binding Marca}"
+                                       HeightRequest="60"
+                                       WidthRequest="60"
+                                       Grid.Row="0"
+                                       Grid.Column="2"
+                                       VerticalTextAlignment="End"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Modelo}"
+                                       FontAttributes="Bold"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalTextAlignment="Start"/>
+                                <Label Grid.Column="1"
+                                       FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding Tipo}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="0"
+                                       Grid.Column="3"
+                                       Text="{Binding Velocidad}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="3"
+                                       Text="{Binding Precio}"
+                                       VerticalOptions="End" />
+                                <Button x:Name="btnMenosHdd"
+                                        Text="-"
+                                        Clicked="onMenosClicked"
+                                        Grid.Column="4"
+                                        Grid.RowSpan="2"
+                                        Grid.Row="0"
+                                        Style="{StaticResource buttonStyle}"/>
                                 <Button x:Name="btnMas"
-                                    Text="+"
-                                    Clicked="onMasClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="6"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
+                                        Text="+"
+                                        Clicked="onMasClicked"
+                                        Grid.Column="6"
+                                        Grid.RowSpan="2"
+                                        Style="{StaticResource buttonStyle}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -246,20 +275,21 @@
             </ListView>
             <!--BOQUE DISCOS DUROS-->
             <Frame x:Name="frameHdds" 
-               Style="{StaticResource frameStyle}"
-               HeightRequest="60">
+                   Style="{StaticResource frameStyle}"
+                   HeightRequest="60">
                 <Label WidthRequest="40" 
-                   Text="Discos Duros" 
-                   HorizontalTextAlignment="Center"
-                   VerticalTextAlignment="Center"/>
+                       Text="Discos Duros" 
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
             </Frame>
 
             <ListView IsVisible="false" 
-                  x:Name="listHdds" 
-                  ItemsSource="{Binding Hdds}" 
-                  Style="{StaticResource listViewStyle}"
-                  HasUnevenRows="True"
-                  HeightRequest="250">
+                      x:Name="listHdds" 
+                      ItemsSource="{Binding Hdds}" 
+                      Style="{StaticResource listViewStyle}"
+                      HasUnevenRows="True"
+                      HeightRequest="250"
+                      SeparatorColor="Black">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -269,55 +299,66 @@
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
-                                <Label Grid.RowSpan="2"
-                                   Text="{Binding Marca}"
-                                   HeightRequest="60"
-                                   WidthRequest="60" />
-                                <Label Grid.Column="1"
-                                   Text="{Binding Modelo}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Column="2"
-                                   Text="{Binding Capacidad}"
-                                   FontAttributes="Bold" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="0"
-                                   Grid.ColumnSpan="2"
-                                   Text="{Binding Tipo}"
-                                   VerticalOptions="End" />
-                                <Label Grid.Row="1"
-                                   Grid.Column="3"
-                                   Text="{Binding Precio}"
-                                   VerticalOptions="End" />
-                                <Button x:Name="btnMenosHdd"
-                                    Text="-"
-                                    Clicked="onMenosClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="4"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
                                 <Label x:Name="labelCantidad"
-                                   Grid.Column="5"
-                                   Grid.RowSpan="2"
-                                   VerticalOptions="Center"
-                                   HorizontalOptions="Center"
-                                   TextColor="black"
-                                   Text="{Binding Cantidad, Mode=TwoWay}"/>
-                                <Button x:Name="btnMasHdd"
-                                    Text="+"
-                                    Clicked="onMasClicked"
-                                    BackgroundColor="White"
-                                    Grid.Column="6"
-                                    Grid.RowSpan="2"
-                                    HeightRequest="30"
-                                    WidthRequest="5"/>
+                                       Grid.Column="5"
+                                       Grid.RowSpan="2"
+                                       VerticalOptions="Center"
+                                       HorizontalOptions="Center"
+                                       TextColor="black"
+                                       Text="{Binding Cantidad, Mode=TwoWay}"/>
+                                <Image Grid.Row="0"
+                                       Grid.Column="0"
+                                       Grid.RowSpan="2"
+                                       Grid.ColumnSpan="2"
+                                       Source="{Binding Imagen}"
+                                       Style="{StaticResource imageStyle}"/>
+                                <Label Text="{Binding Marca}"
+                                       HeightRequest="60"
+                                       WidthRequest="60"
+                                       Grid.Row="0"
+                                       Grid.Column="2"
+                                       Grid.ColumnSpan="2"
+                                       VerticalTextAlignment="End"/>
+                                <Label Grid.Column="2"
+                                       Text="{Binding Modelo}"
+                                       FontAttributes="Bold"
+                                       Grid.Row="1"
+                                       Grid.ColumnSpan="2"
+                                       VerticalTextAlignment="Start"/>
+                                <Label Grid.Column="1"
+                                       FontAttributes="Bold" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"
+                                       Text="{Binding Tipo}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="0"
+                                       Grid.Column="3"
+                                       Text="{Binding Capacidad}"
+                                       VerticalOptions="End" />
+                                <Label Grid.Row="1"
+                                       Grid.Column="3"
+                                       Text="{Binding Precio}"
+                                       VerticalOptions="End" />
+                                <Button x:Name="btnMenosHdd"
+                                        Text="-"
+                                        Clicked="onMenosClicked"
+                                        Grid.Column="4"
+                                        Grid.RowSpan="2"
+                                        Grid.Row="0"
+                                        Style="{StaticResource buttonStyle}"/>
+
+                                <Button x:Name="btnMas"
+                                        Text="+"
+                                        Clicked="onMasClicked"
+                                        Grid.Column="6"
+                                        Grid.RowSpan="2"
+                                        Style="{StaticResource buttonStyle}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -325,12 +366,12 @@
             </ListView>
 
             <Button Text="Realizar Compra"
-                Padding="0,20"
-                Margin="0,40"
-                HorizontalOptions="Center"
-                WidthRequest="300"
-                Clicked="Clicked"
-                BackgroundColor="Silver"/>
+                    Padding="0,20"
+                    Margin="0,40"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    Clicked="Clicked"
+                    BackgroundColor="Silver"/>
         </StackLayout>
     </ScrollView>
     
